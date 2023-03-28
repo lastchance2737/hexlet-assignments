@@ -19,7 +19,7 @@ public class PairedTag extends Tag {
         this.childTags = childTags;
     }
 
-    public String toString() {
+    public final String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(new SingleTag(super.getTag(), this.attributes));
 

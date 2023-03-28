@@ -11,21 +11,12 @@ public class Tag {
         this.tag = tag;
     }
 
-    protected String getTag() {
+    protected final String getTag() {
         return tag;
     }
 
     public String toString() {
         return "<" + tag + ">";
-    }
-
-    protected final String mapToString(Map<String, String> map) {
-        if (map.isEmpty()) {
-            return "";
-        }
-        return " " + map.keySet().stream()
-                .map(key -> key + "=\"" + map.get(key) + "\"")
-                .collect(Collectors.joining(" "));
     }
 }
 // END
